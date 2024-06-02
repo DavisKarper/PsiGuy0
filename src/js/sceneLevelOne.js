@@ -26,10 +26,12 @@ export class LevelOne extends Scene {
             this.cannons[i].kill()
         }
         this.cannons = []
-        this.spawnCannon(200, 500, 350, 0, 4000, false) //cannon1
         this.spawnCannon(1500, 750, -350, 0, 4000, true) //cannon2
-        this.spawnPlayer(75, 750)
+        this.spawnCannon(200, 500, 350, 0, 4000, false) //cannon1
         this.spawnHelmet(700, 690)
+        setTimeout(() => {
+            this.spawnPlayer(75, 750)
+        }, 250);
     }
 
     spawnTerrain() {
