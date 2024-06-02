@@ -74,6 +74,7 @@ export class Player extends Actor {
         setTimeout(() => {
             engine.goToScene('intro')
             this.kill()
+            this.death = false
         }, 1500);
     }
 
